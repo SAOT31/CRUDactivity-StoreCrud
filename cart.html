@@ -1,0 +1,210 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+    <title>CRUD.STORE - Cart</title> <!-- titulo de la pestaña del carrito -->
+    <link rel="stylesheet" href="style.css"> <!-- estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"> <!-- fuente -->
+</head>
+<body>
+
+    <header class="header"> 
+        <div class="top-bar"> <!-- barra negra de arriba -->
+            <div class="container">
+                <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+                <i class="fa-solid fa-xmark close-icon"></i> <!-- X para cerrar -->
+            </div>
+        </div>
+        <nav class="nav container"> <!-- navegacion -->
+            <input type="checkbox" id="mobile-menu-check" class="menu-checkbox"> <!-- checkbox para menu movil -->
+            <div class="nav-left">
+                <label for="mobile-menu-check" class="menu-btn"><i class="fa-solid fa-bars"></i></label> 
+                <a href="index.html" class="logo">CRUD.STORE</a> <!-- logo -->
+            </div>
+            <ul class="nav-links"> <!-- links del menu -->
+                <li><a href="shop.html">Shop <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="shop.html">On Sale</a></li>
+                <li><a href="shop.html">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+            </ul>
+            <div class="nav-icons"> <!-- iconos de la derecha -->
+                <div class="search-box"> <!-- barra de busqueda -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <i class="fa-solid fa-magnifying-glass mobile-search-icon"></i> <!-- lupa movil -->
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> <!-- carrito -->
+                <a href="#"><i class="fa-regular fa-circle-user"></i></a> <!-- usuario -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="container cart-main"> <!-- contenido principal del carrito -->
+        <hr class="divider"> <!-- linea divisoria -->
+        
+        <nav class="breadcrumbs"> <!-- para saber donde estas -->
+            <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Cart</span>
+        </nav>
+
+        <h1 class="page-title">YOUR CART</h1> <!-- titulo grande de la pagina -->
+
+        <div class="cart-layout"> <!-- layout con items del carrito y resumen -->
+            
+            <!-- contenedor con todos los productos del carrito -->
+            <div class="cart-items-container">
+                
+                <!-- primer producto en el carrito -->
+                <div class="cart-item">
+                    <div class="cart-img"> <!-- imagen del producto -->
+                        <img src="images/tshir6.png" alt="Product">
+                    </div>
+                    <div class="cart-details"> <!-- detalles del producto -->
+                        <div class="cart-row-top"> <!-- fila superior con nombre y basura -->
+                            <h3>Gradient Graphic T-shirt</h3> <!-- nombre del producto -->
+                            <i class="fa-solid fa-trash-can delete-icon"></i> <!-- icono de basura para eliminar -->
+                        </div>
+                        <p class="cart-meta">Size: <span>Large</span></p> <!-- talla -->
+                        <p class="cart-meta">Color: <span>White</span></p> <!-- color -->
+                        <div class="cart-row-bottom"> <!-- fila inferior con precio y cantidad -->
+                            <span class="price">$145</span> <!-- precio -->
+                            <div class="qty-selector small"> <!-- selector de cantidad -->
+                                <button class="qty-btn"><i class="fa-solid fa-minus"></i></button> <!-- menos -->
+                                <span class="qty-num">1</span> <!-- cantidad actual -->
+                                <button class="qty-btn"><i class="fa-solid fa-plus"></i></button> <!-- mas -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider-light"> <!-- linea divisoria suave -->
+
+                <!-- segundo producto en el carrito -->
+                <div class="cart-item">
+                    <div class="cart-img">
+                        <img src="images/shirt1.png" alt="Product">
+                    </div>
+                    <div class="cart-details">
+                        <div class="cart-row-top">
+                            <h3>Checkered Shirt</h3>
+                            <i class="fa-solid fa-trash-can delete-icon"></i>
+                        </div>
+                        <p class="cart-meta">Size: <span>Medium</span></p>
+                        <p class="cart-meta">Color: <span>Red</span></p>
+                        <div class="cart-row-bottom">
+                            <span class="price">$180</span>
+                            <div class="qty-selector small">
+                                <button class="qty-btn"><i class="fa-solid fa-minus"></i></button>
+                                <span class="qty-num">1</span>
+                                <button class="qty-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider-light">
+
+                <!-- tercer producto en el carrito -->
+                <div class="cart-item">
+                    <div class="cart-img">
+                        <img src="images/jean1.png" alt="Product">
+                    </div>
+                    <div class="cart-details">
+                        <div class="cart-row-top">
+                            <h3>Skinny Fit Jeans</h3>
+                            <i class="fa-solid fa-trash-can delete-icon"></i>
+                        </div>
+                        <p class="cart-meta">Size: <span>Large</span></p>
+                        <p class="cart-meta">Color: <span>Blue</span></p>
+                        <div class="cart-row-bottom">
+                            <span class="price">$240</span>
+                            <div class="qty-selector small">
+                                <button class="qty-btn"><i class="fa-solid fa-minus"></i></button>
+                                <span class="qty-num">1</span>
+                                <button class="qty-btn"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- caja de resumen del pedido (a la derecha en desktop, abajo en movil) -->
+            <div class="order-summary-box">
+                <h2>Order Summary</h2> <!-- titulo del resumen -->
+                
+                <!-- subtotal (suma de productos) -->
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span class="amount">$565</span>
+                </div>
+                
+                <!-- descuento aplicado -->
+                <div class="summary-line">
+                    <span>Discount (-20%)</span>
+                    <span class="amount red">-$113</span> <!-- en rojo porque es descuento -->
+                </div>
+                
+                <!-- costo de envio -->
+                <div class="summary-line">
+                    <span>Delivery Fee</span>
+                    <span class="amount">$15</span>
+                </div>
+                
+                <hr class="divider-light"> <!-- linea divisoria -->
+                
+                <!-- total final a pagar -->
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span class="amount">$467</span>
+                </div>
+
+                <!-- campo para codigo promocional -->
+                <div class="promo-code-row">
+                    <div class="input-pill-gray"> <!-- input con icono -->
+                        <i class="fa-solid fa-tag"></i> <!-- icono de etiqueta -->
+                        <input type="text" placeholder="Add promo code"> <!-- campo para escribir codigo -->
+                    </div>
+                    <button class="btn-black btn-apply">Apply</button> <!-- boton para aplicar codigo -->
+                </div>
+
+                <!-- boton principal para ir a pagar -->
+                <button class="btn-black btn-checkout">
+                    Go to Checkout <i class="fa-solid fa-arrow-right"></i> <!-- flecha derecha -->
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer"> <!-- footer igual que otras paginas -->
+        <div class="container newsletter-wrapper">
+            <div class="newsletter">
+                <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                    <button type="submit">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <h2 class="logo">CRUD.STORE</h2>
+                <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+                <div class="socials"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-github"></i></div>
+            </div>
+            <div class="footer-links"><h3>COMPANY</h3><ul><li>About</li><li>Features</li><li>Works</li><li>Career</li></ul></div>
+            <div class="footer-links"><h3>HELP</h3><ul><li>Customer Support</li><li>Delivery Details</li><li>Terms & Conditions</li><li>Privacy Policy</li></ul></div>
+            <div class="footer-links"><h3>FAQ</h3><ul><li>Account</li><li>Manage Deliveries</li><li>Orders</li><li>Payments</li></ul></div>
+            <div class="footer-links"><h3>RESOURCES</h3><ul><li>Free eBooks</li><li>Development Tutorial</li><li>How to - Blog</li><li>Youtube Playlist</li></ul></div>
+        </div>
+        <div class="footer-bottom container">
+            <p>Crudzaso.com © 2025, All Rights Reserved</p>
+            <div class="payments"><img src="images/visa.png" alt="Visa"><img src="images/mastercard.png" alt="Mastercard"><img src="images/paypal.png" alt="Paypal"><img src="images/apple.png" alt="Apple"><img src="images/google.png" alt="Google"></div>
+        </div>
+    </footer>
+</body>
+</html>

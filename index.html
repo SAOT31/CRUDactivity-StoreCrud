@@ -1,0 +1,227 @@
+<!DOCTYPE html> <!-- esto le dice al navegador que es un documento HTML5 -->
+<html lang="en"> <!-- aqui empieza todo el html, lang="en" es el idioma -->
+<head> <!-- el head tiene info que no se ve en la pagina pero es importante -->
+    <meta charset="UTF-8"> <!-- esto es para que funcionen las tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- hace que se vea bien en celular -->
+    <title>CRUD.STORE - Home</title> <!-- el titulo que sale en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- traemos los estilos desde style.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- iconos de font awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"> <!-- fuente Poppins de google -->
+</head>
+<body> <!-- aqui empieza lo que SI se ve en la pagina -->
+
+    <header class="header"> <!-- toda la parte de arriba de la pagina -->
+        <div class="top-bar"> <!-- la barrita negra de arriba con la oferta -->
+            <div class="container"> <!-- container centra el contenido -->
+                <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p> <!-- el texto de la oferta -->
+                <i class="fa-solid fa-xmark close-icon"></i> <!-- la X para cerrar -->
+            </div>
+        </div>
+        <nav class="nav container"> <!-- el menu de navegacion -->
+            <input type="checkbox" id="mobile-menu-check" class="menu-checkbox"> <!-- este checkbox controla el menu en celular  -->
+            
+            <div class="nav-left"> <!-- la parte izquierda del menu -->
+                <label for="mobile-menu-check" class="menu-btn"> <!-- el boton de las 3 rayitas en celular -->
+                    <i class="fa-solid fa-bars"></i> <!-- icono de hamburguesa -->
+                </label>
+                <a href="index.html" class="logo">CRUD.STORE</a> <!-- el nombre de la tienda -->
+            </div>
+
+            <ul class="nav-links"> <!-- los links del menu -->
+                <li><a href="shop.html">Shop <i class="fa-solid fa-chevron-down"></i></a></li> 
+                <li><a href="shop.html">On Sale</a></li> <!-- productos en oferta -->
+                <li><a href="shop.html">New Arrivals</a></li> <!-- productos nuevos -->
+                <li><a href="#">Brands</a></li> <!-- marcas -->
+            </ul>
+
+            <div class="nav-icons"> <!-- los iconos de la derecha -->
+                <div class="search-box"> <!-- caja de busqueda -->
+                    <i class="fa-solid fa-magnifying-glass"></i> <!-- la lupa -->
+                    <input type="text" placeholder="Search for products..."> <!-- donde escribes para buscar -->
+                </div>
+                <i class="fa-solid fa-magnifying-glass mobile-search-icon"></i> <!-- lupa para celular -->
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> <!-- carrito de compras -->
+                <a href="#"><i class="fa-regular fa-circle-user"></i></a> <!-- icono de usuario -->
+            </div>
+        </nav>
+    </header>
+
+    <main> <!-- el contenido principal -->
+        <section class="hero"> <!-- la seccion grande de arriba con la imagen -->
+            <div class="container hero-container">
+                <div class="hero-content"> <!-- el texto del lado izquierdo -->
+                    <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1> <!-- titulo grande -->
+                    <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p> <!-- descripcion -->
+                    <button class="btn-black">Shop Now</button> <!-- boton negro -->
+                    <div class="stats"> <!-- las estadisticas -->
+                        <div class="stat-item"><h3>200+</h3><p>International Brands</p></div> <!-- cuantas marcas tienen -->
+                        <div class="stat-item"><h3>2,000+</h3><p>High-Quality Products</p></div> <!-- cuantos productos -->
+                        <div class="stat-item"><h3>30,000+</h3><p>Happy Customers</p></div> <!-- cuantos clientes -->
+                    </div>
+                </div>
+                <div class="hero-image"> <!-- la imagen del lado derecho -->
+                    <img src="images/pareja.png" alt="Fashion Couple"> <!-- foto de la pareja -->
+                    <img src="images/star.png" class="star star-small"> <!-- estrella chiquita -->
+                    <img src="images/star.png" class="star star-big"> <!-- estrella grande -->
+                </div>
+            </div>
+        </section>
+
+        <div class="brands-strip"> <!-- la franja con los logos de marcas -->
+            <div class="container brands-flex">
+                <span>VERSACE</span><span>ZARA</span><span>GUCCI</span><span>PRADA</span><span>Calvin Klein</span> <!-- nombres de marcas -->
+            </div>
+        </div>
+
+        <section class="products-section container"> <!-- seccion de productos nuevos -->
+            <h2 class="section-title">NEW ARRIVALS</h2> <!-- titulo de la seccion -->
+            <div class="product-grid"> <!-- la cuadricula donde van los productos -->
+                <article class="product-card"> <!-- cada producto es una tarjeta -->
+                    <a href="product.html" class="card-link"> 
+                        <div class="card-img"><img src="images/tshir3.png" alt="Product"></div> <!-- foto del producto -->
+                        <h3>T-shirt with Tape Details</h3> <!-- nombre del producto -->
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div> <!-- estrellitas de calificacion -->
+                        <div class="price">$120</div> <!-- precio -->
+                    </a>
+                </article>
+                <article class="product-card"> <!-- segundo producto -->
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/jean1.png" alt="Product"></div>
+                        <h3>Skinny Fit Jeans</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>3.5/5</span></div>
+                        <div class="price-row"><span class="price">$240</span><span class="old-price">$260</span><span class="discount">-20%</span></div> <!-- precio con descuento -->
+                    </a>
+                </article>
+                <article class="product-card desktop-card"> <!-- este solo se ve en compu, no en celular -->
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/shirt1.png" alt="Product"></div>
+                        <h3>Checkered Shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                        <div class="price">$180</div>
+                    </a>
+                </article>
+                <article class="product-card desktop-card"> <!-- otro producto solo para desktop -->
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/tshir2.png" alt="Product"></div>
+                        <h3>Sleeve Striped T-shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                        <div class="price-row"><span class="price">$130</span><span class="old-price">$160</span><span class="discount">-30%</span></div>
+                    </a>
+                </article>
+            </div>
+            <div class="btn-center"><button class="btn-outline">View All</button></div> <!-- boton para ver mas -->
+        </section>
+
+        <hr class="divider container"> <!-- una linea horizontal para separar -->
+
+        <section class="products-section container"> <!-- seccion de mas vendidos -->
+            <h2 class="section-title">TOP SELLING</h2>
+            <div class="product-grid"> <!-- otra cuadricula de productos -->
+                <article class="product-card">
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/shirt2.png" alt="Product"></div>
+                        <h3>Vertical Striped Shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>5.0/5</span></div> <!-- calificacion --> 
+                        <div class="price-row"><span class="price">$212</span><span class="old-price">$232</span><span class="discount">-20%</span></div>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/tshir4.png" alt="Product"></div>
+                        <h3>Courage Graphic T-shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.0/5</span></div>
+                        <div class="price">$145</div>
+                    </a>
+                </article>
+                <article class="product-card desktop-card">
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/bermuda1.png" alt="Product"></div>
+                        <h3>Loose Fit Bermuda Shorts</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>3.0/5</span></div>
+                        <div class="price">$80</div>
+                    </a>
+                </article>
+                <article class="product-card desktop-card">
+                    <a href="product.html" class="card-link">
+                        <div class="card-img"><img src="images/jean2.png" alt="Product"></div>
+                        <h3>Faded Skinny Jeans</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                        <div class="price">$210</div>
+                    </a>
+                </article>
+            </div>
+            <div class="btn-center"><button class="btn-outline">View All</button></div>
+        </section>
+
+        <section class="container" style="padding: 0 16px;"> <!-- padding es el espacio interno -->
+            <div class="browse-box"> <!-- caja para buscar por estilo -->
+                <h2 class="section-title">BROWSE BY dress STYLE</h2>
+                <div class="style-grid"> <!-- cuadricula de estilos -->
+                    <div class="style-item item-casual"></div> <!-- cada div tiene imagen de fondo en el css -->
+                    <div class="style-item item-formal"></div>
+                    <div class="style-item item-party"></div>
+                    <div class="style-item item-gym"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews container"> <!-- seccion de opiniones de clientes -->
+            <div class="reviews-header"> <!-- header de las reviews -->
+                <h2 class="section-title" style="text-align: left;">OUR HAPPY CUSTOMERS</h2> <!-- titulo a la izquierda -->
+                <div class="arrows"> <!-- las flechitas para moverse -->
+                    <i class="fa-solid fa-arrow-left"></i> <!-- flecha izquierda -->
+                    <i class="fa-solid fa-arrow-right"></i> <!-- flecha derecha -->
+                </div>
+            </div>
+            
+            <div class="reviews-scroller"> <!-- el contenedor que se puede deslizar -->
+                <div class="review-card"> <!-- tarjeta de opinion -->
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div> <!-- 5 estrellas -->
+                    <h3>Sarah M. <i class="fa-solid fa-circle-check check-icon"></i></h3> <!-- nombre con check verificado -->
+                    <p>"I'm blown away by the quality and style of the clothes I received from Shop.co..."</p> <!-- comentario -->
+                </div>
+                <div class="review-card"> <!-- otra opinion -->
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <h3>Alex K. <i class="fa-solid fa-circle-check check-icon"></i></h3>
+                    <p>"Finding clothes that align with my personal style used to be a challenge..."</p>
+                </div>
+                <div class="review-card"> <!-- tercera opinion -->
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <h3>James L. <i class="fa-solid fa-circle-check check-icon"></i></h3>
+                    <p>"As someone who's always on the lookout for unique fashion pieces..."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"> <!-- pie de pagina -->
+        <div class="container newsletter-wrapper">
+            <div class="newsletter"> <!-- caja para suscribirse al newsletter -->
+                <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <form> <!-- formulario de suscripcion -->
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i> <!-- icono de sobre -->
+                        <input type="email" placeholder="Enter your email address"> <!-- campo para el email -->
+                    </div>
+                    <button type="submit">Subscribe to Newsletter</button> <!-- boton de enviar -->
+                </form>
+            </div>
+        </div>
+        <div class="footer-content container"> <!-- contenido del footer -->
+            <div class="footer-brand"> <!-- columna con info de la marca -->
+                <h2 class="logo">CRUD.STORE</h2>
+                <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+                <div class="socials"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-github"></i></div> <!-- redes sociales -->
+            </div>
+            <div class="footer-links"><h3>COMPANY</h3><ul><li>About</li><li>Features</li><li>Works</li><li>Career</li></ul></div> <!-- columna de links -->
+            <div class="footer-links"><h3>HELP</h3><ul><li>Customer Support</li><li>Delivery Details</li><li>Terms & Conditions</li><li>Privacy Policy</li></ul></div> <!-- otra columna -->
+            <div class="footer-links"><h3>FAQ</h3><ul><li>Account</li><li>Manage Deliveries</li><li>Orders</li><li>Payments</li></ul></div> <!-- preguntas frecuentes -->
+            <div class="footer-links"><h3>RESOURCES</h3><ul><li>Free eBooks</li><li>Development Tutorial</li><li>How to - Blog</li><li>Youtube Playlist</li></ul></div> <!-- recursos -->
+        </div>
+        <div class="footer-bottom container"> <!-- parte de abajo del footer -->
+            <p>Crudzaso.com © 2025, All Rights Reserved</p> <!-- copyright -->
+            <div class="payments"><img src="images/visa.png" alt="Visa"><img src="images/mastercard.png" alt="Mastercard"><img src="images/paypal.png" alt="Paypal"><img src="images/apple.png" alt="Apple"><img src="images/google.png" alt="Google"></div> <!-- logos de formas de pago -->
+        </div>
+    </footer>
+</body>
+</html>

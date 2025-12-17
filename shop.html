@@ -1,0 +1,255 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive en celular -->
+    <title>CRUD.STORE - Shop</title> <!-- titulo de la pestaña -->
+    <link rel="stylesheet" href="style.css"> <!-- traemos los estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"> <!-- fuente poppins -->
+</head>
+<body>
+
+    <header class="header"> <!-- header igual que index -->
+        <div class="top-bar"> <!-- barra negra de arriba con oferta -->
+            <div class="container">
+                <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+                <i class="fa-solid fa-xmark close-icon"></i> <!-- X para cerrar -->
+            </div>
+        </div>
+        <nav class="nav container"> <!-- navegacion principal -->
+            <input type="checkbox" id="mobile-menu-check" class="menu-checkbox"> <!-- checkbox invisible para menu movil -->
+            <div class="nav-left">
+                <label for="mobile-menu-check" class="menu-btn"><i class="fa-solid fa-bars"></i></label> 
+                <a href="index.html" class="logo">CRUD.STORE</a> <!-- logo -->
+            </div>
+            <ul class="nav-links"> <!-- enlaces del menu -->
+                <li><a href="shop.html">Shop <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="shop.html">On Sale</a></li>
+                <li><a href="shop.html">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+            </ul>
+            <div class="nav-icons"> <!-- iconos de la derecha -->
+                <div class="search-box"> <!-- barra de busqueda -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <i class="fa-solid fa-magnifying-glass mobile-search-icon"></i>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> <!-- carrito -->
+                <a href="#"><i class="fa-regular fa-circle-user"></i></a> <!-- usuario -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="container shop-main"> <!-- contenido principal de la tienda -->
+        <hr class="divider"> <!-- linea divisoria -->
+        <nav class="breadcrumbs"> 
+            <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Casual</span>
+        </nav>
+
+        <input type="checkbox" id="filter-toggle" class="filter-checkbox"> <!-- checkbox para abrir filtros en movil -->
+        
+        <div class="shop-layout"> <!-- layout con filtros y productos -->
+            <aside class="filters-sidebar"> <!-- barra lateral con todos los filtros -->
+                <div class="filter-header-mobile"> <!-- header solo visible en movil -->
+                    <h3>Filters</h3>
+                    <label for="filter-toggle" class="close-filter"><i class="fa-solid fa-xmark"></i></label> <!-- X para cerrar -->
+                </div>
+                
+                <!-- filtro por categoria de ropa -->
+                <div class="filter-section border-bottom">
+                    <div class="filter-row"><span>T-shirts</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Shorts</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Shirts</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Hoodie</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Jeans</span> <i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                
+                <!-- filtro por precio con slider visual -->
+                <div class="filter-section border-bottom">
+                    <div class="filter-title">Price <i class="fa-solid fa-chevron-up"></i></div>
+                    <div class="price-slider-visual"> <!-- slider de rango de precios -->
+                        <div class="slider-track"></div> <!-- barra gris de fondo -->
+                        <div class="slider-range"></div> <!-- barra negra del rango seleccionado -->
+                        <div class="slider-thumb left"></div> <!-- circulito izquierdo -->
+                        <div class="slider-thumb right"></div> <!-- circulito derecho -->
+                    </div>
+                    <div class="price-labels"><span>$50</span><span>$200</span></div> <!-- precios -->
+                </div>
+                
+                <!-- filtro por colores -->
+                <div class="filter-section border-bottom">
+                    <div class="filter-title">Colors <i class="fa-solid fa-chevron-up"></i></div>
+                    <div class="color-options"> <!-- circulitos de colores -->
+                        <div class="color-circle" style="background:#00C12B"></div> 
+                        <div class="color-circle" style="background:#F50606"></div> 
+                        <div class="color-circle" style="background:#F5DD06"></div> 
+                        <div class="color-circle" style="background:#F57906"></div> 
+                        <div class="color-circle" style="background:#06CAF5"></div> 
+                        <div class="color-circle active" style="background:#063AF5"><i class="fa-solid fa-check"></i></div> 
+                        <div class="color-circle" style="background:#7D06F5"></div> 
+                        <div class="color-circle" style="background:#F506A4"></div> 
+                        <div class="color-circle" style="background:#FFFFFF; border:1px solid #ddd"></div> 
+                        <div class="color-circle" style="background:#000000"></div> 
+                    </div>
+                </div>
+                
+                <!-- filtro por tallas -->
+                <div class="filter-section border-bottom">
+                    <div class="filter-title">Size <i class="fa-solid fa-chevron-up"></i></div>
+                    <div class="size-options"> <!-- botones de tallas -->
+                        <button class="size-pill">XX-Small</button>
+                        <button class="size-pill">X-Small</button>
+                        <button class="size-pill">Small</button>
+                        <button class="size-pill">Medium</button>
+                        <button class="size-pill black">Large</button> <!-- Large esta seleccionado -->
+                        <button class="size-pill">X-Large</button>
+                        <button class="size-pill">XX-Large</button>
+                    </div>
+                </div>
+                
+                <!-- filtro por estilo de vestimenta -->
+                <div class="filter-section">
+                    <div class="filter-title">Dress Style <i class="fa-solid fa-chevron-up"></i></div>
+                    <div class="filter-row"><span>Casual</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Formal</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Party</span> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="filter-row"><span>Gym</span> <i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                
+                <button class="btn-black btn-apply">Apply Filter</button> <!-- boton para aplicar filtros -->
+            </aside>
+
+            <section class="catalog-content"> <!-- seccion principal con los productos -->
+                <div class="catalog-header"> <!-- cabecera del catalogo -->
+                    <h2>Casual</h2>
+                    <div class="catalog-meta">
+                        <p>Showing 1-10 of 100 Products</p> <!-- cuantos productos se muestran -->
+                        <div class="catalog-controls">
+                            <span class="sort-text">Sort by: <strong>Most Popular</strong> <i class="fa-solid fa-chevron-down"></i></span> <!-- ordenar por -->
+                            <label for="filter-toggle" class="filter-btn-mobile"><i class="fa-solid fa-sliders"></i></label> <!-- boton filtros en movil -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid shop-grid-cols"> <!-- grid de productos, 3 columnas en tablet/desktop -->
+                    
+                    <!-- primer producto -->
+                    <article class="product-card">
+                        <a href="product.html" class="card-link">
+                            <div class="card-img"><img src="images/tshir6.png" alt="Product"></div>
+                            <h3>Gradient Graphic T-shirt</h3>
+                            <div class="rating"><i class="fa-solid fa-star"></i> <span>3.5/5</span></div>
+                            <div class="price">$145</div>
+                        </a>
+                    </article>
+
+                    <!-- segundo producto -->
+                    <article class="product-card">
+                        <div class="card-img"><img src="images/polo.png" alt="Product"></div>
+                        <h3>Polo with Tipping Details</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                        <div class="price">$180</div>
+                    </article>
+
+                    <!-- tercer producto -->
+                    <article class="product-card">
+                        <div class="card-img"><img src="images/tshir5.png" alt="Product"></div>
+                        <h3>Black Striped T-shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>5.0/5</span></div>
+                        <div class="price-row"><span class="price">$120</span><span class="old-price">$150</span><span class="discount">-30%</span></div>
+                    </article>
+
+                    <!-- cuarto producto -->
+                    <article class="product-card">
+                        <div class="card-img"><img src="images/jean1.png" alt="Product"></div>
+                        <h3>Skinny Fit Jeans</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>3.5/5</span></div>
+                        <div class="price-row"><span class="price">$240</span><span class="old-price">$260</span><span class="discount">-20%</span></div>
+                    </article>
+
+                    <!-- quinto producto -->
+                    <article class="product-card">
+                        <div class="card-img"><img src="images/shirt1.png" alt="Product"></div>
+                        <h3>Checkered Shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                        <div class="price">$180</div>
+                    </article>
+
+                    <!-- sexto producto -->
+                    <article class="product-card">
+                        <div class="card-img"><img src="images/tshir2.png" alt="Product"></div>
+                        <h3>Sleeve Striped T-shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                        <div class="price-row"><span class="price">$130</span><span class="old-price">$160</span><span class="discount">-30%</span></div>
+                    </article>
+
+                    <!-- estos tres productos solo se ven en desktop -->
+                    <article class="product-card desktop-card">
+                        <div class="card-img"><img src="images/shirt2.png" alt="Product"></div>
+                        <h3>Vertical Striped Shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>5.0/5</span></div>
+                        <div class="price-row"><span class="price">$212</span><span class="old-price">$232</span><span class="discount">-20%</span></div>
+                    </article>
+                    <article class="product-card desktop-card">
+                        <div class="card-img"><img src="images/tshir4.png" alt="Product"></div>
+                        <h3>Courage Graphic T-shirt</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>4.0/5</span></div>
+                        <div class="price">$145</div>
+                    </article>
+                    <article class="product-card desktop-card">
+                        <div class="card-img"><img src="images/bermuda1.png" alt="Product"></div>
+                        <h3>Loose Fit Bermuda Shorts</h3>
+                        <div class="rating"><i class="fa-solid fa-star"></i> <span>3.0/5</span></div>
+                        <div class="price">$80</div>
+                    </article>
+                </div>
+
+                <hr class="divider"> <!-- linea divisoria -->
+                
+                <!-- paginacion para navegar entre paginas -->
+                <div class="pagination">
+                    <button class="page-btn"><i class="fa-solid fa-arrow-left"></i> Previous</button> <!-- anterior -->
+                    <div class="page-numbers"> <!-- numeros de pagina -->
+                        <button class="p-num active">1</button> <!-- pagina 1 activa -->
+                        <button class="p-num">2</button>
+                        <button class="p-num">3</button>
+                        <span class="p-dots">...</span> 
+                        <button class="p-num">8</button>
+                        <button class="p-num">9</button>
+                        <button class="p-num">10</button>
+                    </div>
+                    <button class="page-btn">Next <i class="fa-solid fa-arrow-right"></i></button> <!-- siguiente -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer"> <!-- footer igual que en index -->
+        <div class="container newsletter-wrapper">
+            <div class="newsletter">
+                <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <form>
+                    <div class="input-group"><i class="fa-regular fa-envelope"></i><input type="email" placeholder="Enter your email address"></div>
+                    <button type="submit">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <h2 class="logo">CRUD.STORE</h2>
+                <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+                <div class="socials"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-github"></i></div>
+            </div>
+            <div class="footer-links"><h3>COMPANY</h3><ul><li>About</li><li>Features</li><li>Works</li><li>Career</li></ul></div>
+            <div class="footer-links"><h3>HELP</h3><ul><li>Customer Support</li><li>Delivery Details</li><li>Terms & Conditions</li><li>Privacy Policy</li></ul></div>
+            <div class="footer-links"><h3>FAQ</h3><ul><li>Account</li><li>Manage Deliveries</li><li>Orders</li><li>Payments</li></ul></div>
+            <div class="footer-links"><h3>RESOURCES</h3><ul><li>Free eBooks</li><li>Development Tutorial</li><li>How to - Blog</li><li>Youtube Playlist</li></ul></div>
+        </div>
+        <div class="footer-bottom container">
+            <p>Crudzaso.com © 2025, All Rights Reserved</p>
+            <div class="payments"><img src="images/visa.png" alt="Visa"><img src="images/mastercard.png" alt="Mastercard"><img src="images/paypal.png" alt="Paypal"><img src="images/apple.png" alt="Apple"><img src="images/google.png" alt="Google"></div>
+        </div>
+    </footer>
+</body>
+</html>

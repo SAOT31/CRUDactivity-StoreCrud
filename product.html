@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
+    <title>CRUD.STORE - Product</title> <!-- titulo de la pagina de producto -->
+    <link rel="stylesheet" href="style.css"> <!-- estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"> <!-- fuente -->
+</head>
+<body>
+
+    <header class="header"> 
+        <div class="top-bar"> <!-- barra negra de arriba -->
+            <div class="container">
+                <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </div>
+        </div>
+        <nav class="nav container"> <!-- navegacion -->
+            <input type="checkbox" id="mobile-menu-check" class="menu-checkbox"> <!-- checkbox invisible para menu movil -->
+            <div class="nav-left">
+                <label for="mobile-menu-check" class="menu-btn"><i class="fa-solid fa-bars"></i></label> <!-- hamburguesa -->
+                <a href="index.html" class="logo">CRUD.STORE</a> <!-- logo -->
+            </div>
+            <ul class="nav-links"> <!-- links del menu -->
+                <li><a href="shop.html">Shop <i class="fa-solid fa-chevron-down"></i></a></li>
+                <li><a href="shop.html">On Sale</a></li>
+                <li><a href="shop.html">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+            </ul>
+            <div class="nav-icons"> <!-- iconos de la derecha -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <i class="fa-solid fa-magnifying-glass mobile-search-icon"></i>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container shop-main"> <!-- contenido principal -->
+        <hr class="divider"> <!-- linea divisoria -->
+        
+        <!-- iconos  (home > shop > men > t-shirts) -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> 
+            <a href="shop.html">Shop</a> <i class="fa-solid fa-chevron-right"></i>
+            <a href="#">Men</a> <i class="fa-solid fa-chevron-right"></i>
+            <span>T-shirts</span> 
+        </nav>
+
+        <!-- seccion principal del producto (galeria + info) -->
+        <section class="product-details-wrapper">
+            
+            <!-- galeria de imagenes del producto -->
+            <div class="product-gallery">
+                <div class="thumbnails"> <!-- miniaturas pequeñas -->
+                    <div class="thumb-img active"><img src="images/tshir6.png" alt="Thumb 1"></div> <!-- miniatura activa -->
+                    <div class="thumb-img"><img src="images/tshir7.png" alt="Thumb 2"></div>
+                    <div class="thumb-img"><img src="images/tshir8.png" alt="Thumb 3"></div>
+                </div>
+                <div class="main-image"> <!-- imagen principal grande -->
+                    <img src="images/tshir6.png" alt="One Life Graphic T-shirt">
+                </div>
+            </div>
+
+            <!-- informacion del producto -->
+            <div class="product-info">
+                <h1>One Life Graphic T-shirt</h1> <!-- nombre del producto -->
+                
+                <!-- calificacion con estrellas -->
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <!-- 4.5 estrellas -->
+                    <span>4.5/5</span>
+                </div>
+                
+                <!-- precio con descuento -->
+                <div class="price-row big-price">
+                    <span class="price">$260</span> <!-- precio actual -->
+                    <span class="old-price">$300</span> <!-- precio original tachado -->
+                    <span class="discount">-40%</span> <!-- porcentaje de descuento -->
+                </div>
+                
+                <!-- descripcion del producto -->
+                <p class="desc-text">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</p>
+                
+                <hr class="divider-light"> <!-- linea divisoria suave -->
+                
+                <!-- selector de colores -->
+                <div class="selector-group">
+                    <span class="label">Select Colors</span> <!-- etiqueta -->
+                    <div class="color-options"> <!-- circulitos de colores -->
+                        <div class="color-circle active" style="background-color: #4F4631; color: white;"><i class="fa-solid fa-check"></i></div> <!-- cafe seleccionado -->
+                        <div class="color-circle" style="background-color: #314F4A;"></div> <!-- verde -->
+                        <div class="color-circle" style="background-color: #31344F;"></div> <!-- azul -->
+                    </div>
+                </div>
+                
+                <hr class="divider-light">
+                
+                <!-- selector de talla -->
+                <div class="selector-group">
+                    <span class="label">Choose Size</span> <!-- etiqueta -->
+                    <div class="size-options"> <!-- botones de tallas -->
+                        <button class="size-pill">Small</button>
+                        <button class="size-pill">Medium</button>
+                        <button class="size-pill black">Large</button> <!-- Large seleccionado (negro) -->
+                        <button class="size-pill">X-Large</button>
+                    </div>
+                </div>
+                
+                <hr class="divider-light">
+                
+                <!-- fila de acciones (cantidad + agregar al carrito) -->
+                <div class="actions-row">
+                    <div class="qty-selector"> <!-- selector de cantidad -->
+                        <button class="qty-btn"><i class="fa-solid fa-minus"></i></button> <!-- menos -->
+                        <span class="qty-num">1</span> <!-- cantidad -->
+                        <button class="qty-btn"><i class="fa-solid fa-plus"></i></button> <!-- mas -->
+                    </div>
+                    <button class="btn-black btn-add-cart">Add to Cart</button> <!-- boton principal -->
+                </div>
+            </div>
+        </section>
+
+        <!-- seccion de tabs (detalles, reviews, faqs) -->
+        <section class="reviews-section-tabs">
+            <div class="tabs-header"> <!-- header con los tres tabs -->
+                <button class="tab-btn">Product Details</button> <!-- detalles del producto -->
+                <button class="tab-btn active">Rating & Reviews</button> <!-- reviews (activo) -->
+                <button class="tab-btn">FAQs</button> <!-- preguntas frecuentes -->
+            </div>
+
+            <!-- contenido del area de reviews -->
+            <div class="reviews-content-area">
+                <div class="reviews-top-bar"> <!-- barra superior de reviews -->
+                    <h3>All Reviews <span class="count">(451)</span></h3> <!-- titulo con cantidad -->
+                    <div class="reviews-controls"> <!-- controles -->
+                        <button class="circle-btn"><i class="fa-solid fa-sliders"></i></button> <!-- filtros -->
+                        <button class="pill-btn desktop-only">Latest <i class="fa-solid fa-chevron-down"></i></button> <!-- ordenar (solo desktop) -->
+                        <button class="btn-black btn-sm">Write a Review</button> <!-- escribir review -->
+                    </div>
+                </div>
+
+                <!-- grid con todas las reviews -->
+                <div class="reviews-grid-product">
+                    
+                    <!-- primera review -->
+                    <div class="review-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div> <!-- 4.5 estrellas -->
+                        <div class="review-header"> <!-- header con nombre y opciones -->
+                            <h3>Samantha D. <i class="fa-solid fa-circle-check check-icon"></i></h3> <!-- nombre con palomita de verificacion -->
+                            <i class="fa-solid fa-ellipsis"></i> <!-- tres puntos para opciones -->
+                        </div>
+                        <p>"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."</p> <!-- comentario -->
+                        <span class="review-date">Posted on August 14, 2023</span> <!-- fecha -->
+                    </div>
+                    
+                    <!-- segunda review -->
+                    <div class="review-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div> <!-- 5 estrellas -->
+                        <div class="review-header">
+                            <h3>Alex M. <i class="fa-solid fa-circle-check check-icon"></i></h3>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <p>"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."</p>
+                        <span class="review-date">Posted on August 15, 2023</span>
+                    </div>
+                    
+                    <!-- tercera review -->
+                    <div class="review-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                        <div class="review-header">
+                            <h3>Ethan R. <i class="fa-solid fa-circle-check check-icon"></i></h3>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <p>"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."</p>
+                        <span class="review-date">Posted on August 16, 2023</span>
+                    </div>
+                    
+                    <!-- cuarta review (solo se ve en desktop) -->
+                    <div class="review-card desktop-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <div class="review-header">
+                            <h3>Olivia P. <i class="fa-solid fa-circle-check check-icon"></i></h3>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <p>"As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."</p>
+                        <span class="review-date">Posted on August 17, 2023</span>
+                    </div>
+                </div>
+                
+                <!-- boton para cargar mas reviews -->
+                <div class="btn-center"><button class="btn-outline">Load More Reviews</button></div>
+            </div>
+        </section>
+
+        <!-- seccion de productos relacionados (te podria gustar) -->
+        <section class="products-section">
+            <h2 class="section-title">You might also like</h2> <!-- titulo -->
+            <div class="product-grid"> <!-- grid de productos -->
+                
+                <!-- primer producto relacionado -->
+                <article class="product-card">
+                    <div class="card-img"><img src="images/polo.png" alt="Polo"></div>
+                    <h3>Polo with Contrast Trims</h3>
+                    <div class="rating"><i class="fa-solid fa-star"></i> <span>4.0/5</span></div>
+                    <div class="price-row"><span class="price">$212</span><span class="old-price">$242</span><span class="discount">-20%</span></div>
+                </article>
+                
+                <!-- segundo producto -->
+                <article class="product-card">
+                    <div class="card-img"><img src="images/tshir4.png" alt="Tshirt"></div>
+                    <h3>Gradient Graphic T-shirt</h3>
+                    <div class="rating"><i class="fa-solid fa-star"></i> <span>3.5/5</span></div>
+                    <div class="price">$145</div>
+                </article>
+                
+                <!-- tercer y cuarto productos solo en desktop -->
+                <article class="product-card desktop-card">
+                    <div class="card-img"><img src="images/polo2.png" alt="Polo"></div>
+                    <h3>Polo with Tipping Details</h3>
+                    <div class="rating"><i class="fa-solid fa-star"></i> <span>4.5/5</span></div>
+                    <div class="price">$180</div>
+                </article>
+                <article class="product-card desktop-card">
+                    <div class="card-img"><img src="images/tshir5.png" alt="Tshirt"></div>
+                    <h3>Black Striped T-shirt</h3>
+                    <div class="rating"><i class="fa-solid fa-star"></i> <span>5.0/5</span></div>
+                    <div class="price-row"><span class="price">$120</span><span class="old-price">$150</span><span class="discount">-30%</span></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"> <!-- footer igual que otras paginas -->
+        <div class="container newsletter-wrapper">
+            <div class="newsletter">
+                <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email address">
+                    </div>
+                    <button type="submit">Subscribe to Newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <h2 class="logo">CRUD.STORE</h2>
+                <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+                <div class="socials"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-github"></i></div>
+            </div>
+            <div class="footer-links"><h3>COMPANY</h3><ul><li>About</li><li>Features</li><li>Works</li><li>Career</li></ul></div>
+            <div class="footer-links"><h3>HELP</h3><ul><li>Customer Support</li><li>Delivery Details</li><li>Terms & Conditions</li><li>Privacy Policy</li></ul></div>
+            <div class="footer-links"><h3>FAQ</h3><ul><li>Account</li><li>Manage Deliveries</li><li>Orders</li><li>Payments</li></ul></div>
+            <div class="footer-links"><h3>RESOURCES</h3><ul><li>Free eBooks</li><li>Development Tutorial</li><li>How to - Blog</li><li>Youtube Playlist</li></ul></div>
+        </div>
+        <div class="footer-bottom container">
+            <p>Crudzaso.com © 2025, All Rights Reserved</p>
+            <div class="payments"><img src="images/visa.png" alt="Visa"><img src="images/mastercard.png" alt="Mastercard"><img src="images/paypal.png" alt="Paypal"><img src="images/apple.png" alt="Apple"><img src="images/google.png" alt="Google"></div>
+        </div>
+    </footer>
+</body>
+</html>
